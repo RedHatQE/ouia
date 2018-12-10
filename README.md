@@ -39,11 +39,14 @@ This Adherence block is designed to cover widgets in use on pages. Widgets that 
   * e.g. A vertical navigation can be expected to only be instantiated once on a page, as such
     it does not need any other identifying factors. Another widget type, like a button, may be
     created multiple times on a page and requires some kind of value as an id.
+* An attribute called `data-ouia-safe` which is `True` when the widget is in a static state,
+  i.e. no animations are occurring. At all other times, this value should be `False`.
 
 ### `OpenUIAuto:Page`
 This adherence block is designed to cover page identification. Pages that are `OpenUIAuto:Page`
-compliant have the following properties.
+compliant have the following properties:
 
+#### `Page Type Details (PageType)`
 * A named `<xxxx>` html tag with the following attributes:
   * A `data-ouia-page-type` attribute which determines the base content of the page
      * e.g. A page listing some inventory of food items could have `food-list` as its id
@@ -75,4 +78,10 @@ Or
         142526.
 * e.g. A page describing the edit action of a food item with the id 142526 could have an attribute
   looking like `<section page-type="food" page-action="edit" object-id="142526">`
-  
+
+#### `Page Interaction Safe (PageSafe)`
+* A javascript accessible attribute named `ouia-page-safe` which declares whether the page
+  is safe to access. This should roll up a single value which represents the completion of:
+  * Page animations
+  * XHR requests
+  * Any other operations which affect the DOM structure
