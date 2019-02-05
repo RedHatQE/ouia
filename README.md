@@ -100,10 +100,10 @@ A project wishing to declare its conformity should use one of the supplied badge
 case that the entire spec has been conformed to in its entirety, should proudly display the overall
 compliance badge.
 
-![Compliant Badge](ouia.svg)
+![Compliant Badge](ouia.png)
 
-![Compliant Badge](ouia-widget.svg)
+![Compliant Badge](ouia-widget.png)
 
-![Compliant Badge](ouia-page.svg)
+![Compliant Badge](ouia-page.png)
 
-![Compliant Badge](ouia-pagesafe.svg)
+![Compliant Badge](ouia-pagesafe.png)
