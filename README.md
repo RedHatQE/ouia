@@ -1,6 +1,15 @@
 Open Web UI Design Specification for Enabling Automation (OUIA) 1.0
 ===================================================================
 
+Metadata
+--------
+
+| Key             | Value |
+|-----------------|-------|
+| **Status**          | Draft |
+| **Authors**         | Pete Savage, Karel Hala, Ronny Pfannschmidt |
+| **Current Version** | 1.0-RC |
+
 Abstract
 --------
 
