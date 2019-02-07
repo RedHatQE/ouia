@@ -35,11 +35,11 @@ are to be interpreted as described in [RFC 2119](https://www.ietf.org/rfc/rfc211
 Namespacing
 -----------
 
-For the purpose of fulfilling or augmenting this specification, including any and all future work:
-
-* All HTML elements created, **MUST** be prefixed with `ouia`.
-* All custom HTML attributes, **MUST** be prefixed with `data-ouia`.
-* Any additional attributes to Javascript objects, must be prefixed with `ouia`.
+* All HTML elements created for the sole purpose of fulfilling or augmenting this specification,
+  **MUST** be prefixed with `ouia`. Currently there are no custom HTML elements defined.
+* All custom HTML attributes to be applied to existing HTML elements **MUST** be prefixed
+  with `data-ouia`.
+* All additional attributes to existing Javascript objects, **MUST** be prefixed with `ouia`.
 
 Specification Parts
 -------------------
