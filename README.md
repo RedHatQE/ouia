@@ -45,7 +45,7 @@ Specification Parts
 -------------------
 
 The OUIA specification is split up into several sections. As stated, an application or
-framework can one or more of the following specification parts, but each section must be implemented
+framework can implement any number of the specification parts, but each section must be implemented
 completely. Thus a project can be said to be `OUIA:Widget` or `OUIA:Page` compliant,
 as opposed to being completely `OUIA` compliant, but **ALL** components of the
 `OUIA:Widget` part **MUST** be adhered to.
