@@ -65,7 +65,7 @@ This part is designed to cover widgets in use on pages. Widgets that are `OUIA:W
   * e.g. A page that has a special dropdown, could choose to name that dropdown as `CustomDropdown`.
     All instances of this `CustomDropdown` widget **MUST** be expected to be able to be controlled
     via the same automation.
-* An id attribute called `data-ouai-widget-id` which is **OPTIONAL** if there will only be
+* An id attribute called `data-ouia-widget-id` which is **OPTIONAL** if there will only be
   one instance of the widget on the page at once. Any `id` on the page **MUST** be unique
   even if it is used by different widget.
   * e.g. A vertical navigation can be expected to only be instantiated once on a page, as such
