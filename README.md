@@ -46,32 +46,32 @@ Specification Parts
 
 The OUIA specification is split up into several sections. As stated, an application or
 framework can implement any number of the specification parts, but each section must be implemented
-completely. Thus a project can be said to be `OUIA:Widget` or `OUIA:Page` compliant,
+completely. Thus a project can be said to be `OUIA:Component` or `OUIA:Page` compliant,
 as opposed to being completely `OUIA` compliant, but **ALL** components of the
-`OUIA:Widget` part **MUST** be adhered to.
+`OUIA:Component` part **MUST** be adhered to.
 
 The following blocks exist in the specification:
 
-* `OUIA:Widget` - widgets and widget frameworks
+* `OUIA:Component` - components and component frameworks
 * `OUIA:Page` - page identification
 * `OUIA:PageSafety` - interaction safety
 
-### `OUIA:Widget`
-This part is designed to cover widgets in use on pages. Widgets that are `OUIA:Widget` compliant
+### `OUIA:Component`
+This part is designed to cover components in use on pages. Components that are `OUIA:Component` compliant
 **MUST** have the following properties.
 
-* A root level HTML element with a `data-ouia-widget-type` attribute describing a unique name
-  identifying **ALL** HTML widgets that can be controlled with the same code or interactions.
+* A root level HTML element with a `data-ouia-component-type` attribute describing a unique name
+  identifying **ALL** HTML components that can be controlled with the same code or interactions.
   * e.g. A page that has a special dropdown, could choose to name that dropdown as `CustomDropdown`.
-    All instances of this `CustomDropdown` widget **MUST** be expected to be able to be controlled
+    All instances of this `CustomDropdown` component **MUST** be expected to be able to be controlled
     via the same automation.
-* An id attribute called `data-ouia-widget-id` which is **OPTIONAL** if there will only be
-  one instance of the widget on the page at once. Any `id` on the page **MUST** be unique
-  even if it is used by different widget.
+* An id attribute called `data-ouia-component-id` which is **OPTIONAL** if there will only be
+  one instance of the component on the page at once. Any `id` on the page **MUST** be unique
+  even if it is used by different component.
   * e.g. A vertical navigation can be expected to only be instantiated once on a page, as such
-    it does not need any other identifying factors. Another widget type, like a button, would be
+    it does not need any other identifying factors. Another component type, like a button, would be
     created multiple times on a page and requires some kind of value as a unique identifying id.
-* An attribute called `data-ouia-safe` which is `True` only when the widget is in a static state,
+* An attribute called `data-ouia-safe` which is `True` only when the component is in a static state,
   i.e. no animations are occurring. At all other times, this value **MUST** be `False`.
 
 ### `OUIA:Page`
@@ -95,7 +95,7 @@ have the following properties:
     * e.g. A page describing a food item that is being edited, could have an 
       `ouia-page-object-id` field of 142526.
 * Each of the four main content areas present on the page, *Header*, *Main*, *Navigation*, *Footer*,
-  **MUST** be embellished with the corresponding data attribute, to aid in finding widgets
+  **MUST** be embellished with the corresponding data attribute, to aid in finding components
   within certain areas.
   * `data-ouia-header="true"` - For the header
   * `data-ouia-footer="true"` - For the footer
@@ -130,7 +130,7 @@ compliance badge.
 
 ![Compliant Badge](ouia.png)
 
-![Compliant Badge](ouia-widget.png)
+![Compliant Badge](ouia-component.png)
 
 ![Compliant Badge](ouia-page.png)
 
