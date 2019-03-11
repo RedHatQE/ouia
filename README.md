@@ -17,12 +17,12 @@ This specification is designed to promote certain key guidelines to follow when 
 framework or application. Its goal is to ease the burden of individuals wishing to create and
 maintain automated testing environments.
 
-The OUIA is composed of multiple sections. An element of an app/framework, can be said to be
-compliant with either all of the specification, or one or more of its parts. As such it is defined
+The OUIA is composed of multiple sections. An element of an app/framework can be said to be
+compliant with either all of the specification or one or more of its parts. As such it is defined
 as a _composable_ specification. The reason for this is largely due to the prevalent demarcation
 between responsibilities of framework and application developers. For instance an application may
-use a particular web framework, and be unable to negotiate compliance of that framework with OUIA.
-However they may choose to make the elements that they _do_ have control over, fully compliant
+use a particular web framework and be unable to negotiate compliance of that framework with OUIA.
+However they may choose to make the elements that they _do_ have control over fully compliant
 with the OUIA.
 
 Language
@@ -35,11 +35,11 @@ are to be interpreted as described in [RFC 2119](https://www.ietf.org/rfc/rfc211
 Namespacing
 -----------
 
-* All HTML elements created for the sole purpose of fulfilling or augmenting this specification,
+* All HTML elements created for the sole purpose of fulfilling or augmenting this specification
   **MUST** be prefixed with `ouia`. Currently there are no custom HTML elements defined.
 * All custom HTML attributes to be applied to existing HTML elements **MUST** be prefixed
   with `data-ouia`.
-* All additional attributes to existing Javascript objects, **MUST** be prefixed with `ouia`.
+* All additional attributes to existing Javascript objects **MUST** be prefixed with `ouia`.
 
 Specification Parts
 -------------------
@@ -54,7 +54,7 @@ The following blocks exist in the specification:
 
 * `OUIA:Component` - components and component frameworks
 * `OUIA:Page` - page identification
-* `OUIA:PageSafety` - interaction safety
+* `OUIA:PageSafe` - interaction safety
 
 ### `OUIA:Component`
 This part is designed to cover components in use on pages. Components that are `OUIA:Component` compliant
@@ -95,7 +95,7 @@ have the following properties:
     * e.g. A page describing a food item that is being edited, could have an 
       `ouia-page-object-id` field of 142526.
 * Each of the four main content areas present on the page, *Header*, *Main*, *Navigation*, *Footer*,
-  **MUST** be embellished with the corresponding data attribute, to aid in finding components
+  **MUST** be embellished with the corresponding data attribute to aid in finding components
   within certain areas.
   * `data-ouia-header="true"` - For the header
   * `data-ouia-footer="true"` - For the footer
@@ -122,10 +122,12 @@ looking like `<body ouia-page-type="food" ouia-page-action="edit" ouia-page-obje
   * Page animations
   * XHR requests
   * Any other operations which affect the DOM structure
+* This should take the form of a Boolean, but the specification can and should not make imposed
+  specific implementation details.
 
 ### Declaration of Conformity
 A project wishing to declare its conformity should use one of the supplied badges, or in the
-case that the entire spec has been conformed to in its entirety, should proudly display the overall
+case that the entire spec has been conformed to in its entirety should proudly display the overall
 compliance badge.
 
 ![Compliant Badge](ouia.png)
