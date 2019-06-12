@@ -62,16 +62,16 @@ This part is designed to cover components in use on pages. Components that are `
 
 * A root level HTML element with a `data-ouia-component-type` attribute describing a unique name
   identifying **ALL** HTML components that can be controlled with the same code or interactions.
-  * e.g. A page that has a special dropdown, could choose to name that dropdown as `CustomDropdown`.
+  * e.g. A page that has a special dropdown could choose to name that dropdown as `CustomDropdown`.
     All instances of this `CustomDropdown` component **MUST** be expected to be able to be controlled
     via the same automation.
-* An id attribute called `data-ouia-component-id` which is **OPTIONAL** if there will only be
-  one instance of the component on the page at once. Any `id` on the page **MUST** be unique
+* An id attribute called `data-ouia-component-id`, which is **OPTIONAL** if there will only be
+  one instance of the component on the page at once. Any `id` on the page **MUST** be unique,
   even if it is used by different component.
-  * e.g. A vertical navigation can be expected to only be instantiated once on a page, as such
+  * e.g. A vertical navigation can be expected to only be instantiated once on a page. As such
     it does not need any other identifying factors. Another component type, like a button, would be
-    created multiple times on a page and requires some kind of value as a unique identifying id.
-* An attribute called `data-ouia-safe` which is `True` only when the component is in a static state,
+    created multiple times on a page and requires some kind of unique identifying id.
+* An attribute called `data-ouia-safe`, which is `True` only when the component is in a static state,
   i.e. no animations are occurring. At all other times, this value **MUST** be `False`.
 
 ### `OUIA:Page`
@@ -79,7 +79,7 @@ This part is designed to cover page identification. Pages that are `OUIA:Page` c
 have the following properties:
 
 * A `<body>` html tag with the following attributes:
-  * A `ouia-page-type` attribute which determines the base context of the page.
+  * A `ouia-page-type` attribute, which determines the base context of the page.
      * e.g. A page listing some inventory of food items could have `food` as its 
        `ouia-page-type` attribute.
   * A `ouia-page-action` attribute, which determines if the page has a controller
@@ -91,9 +91,8 @@ have the following properties:
   * A page which dynamically changes action without a page reload **MUST** correctly update the
     `ouia-page-type` and `ouia-page-action` attributes if the context of the page changes.
   * An **OPTIONAL** `ouia-page-object-id` attribute, where the page is in the context of a
-    specific instance of an object.
-    * e.g. A page describing a food item that is being edited, could have an 
-      `ouia-page-object-id` field of 142526.
+    specific instance of an object.  E.g. A page describing a food item that is
+    being edited, could have an `ouia-page-object-id` field of 142526.
 * Each of the four main content areas present on the page, *Header*, *Main*, *Navigation*, *Footer*,
   **MUST** be embellished with the corresponding data attribute to aid in finding components
   within certain areas.
@@ -107,7 +106,7 @@ have the following properties:
   with a valid URL to the target, and in addition **MUST** also include a
   `data-ouia-navigation-name` which identifies the name of the navigation link to aid in building
   a site map. 
-* All other links which are considered top level navigational, i.e. they force a page reload/load
+* All other links which are considered top level navigational, i.e. they force a page reload/load,
   **MUST** also be defined with hidden links inside the *Navigation* pane to aid in site map 
   creation.
   * e.g. `<a href="/settings" data-ouia-navigation-name="Settings" hidden="true"/>`
