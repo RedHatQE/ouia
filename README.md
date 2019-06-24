@@ -1,4 +1,4 @@
-Open Web UI Design Specification for Enabling Automation (OUIA) 1.0
+Open UI Automation (OUIA) 1.0
 ===================================================================
 
 Metadata
@@ -129,10 +129,10 @@ A project wishing to declare its conformity should use one of the supplied badge
 case that the entire spec has been conformed to in its entirety should proudly display the overall
 compliance badge.
 
-![Compliant Badge](ouia.png)
+![](ouia.png "Compliance Badge")
 
-![Compliant Badge](ouia-component.png)
+![](ouia-component.png "Component Compliance Badge")
 
-![Compliant Badge](ouia-page.png)
+![](ouia-page.png "Page Compliance Badge")
 
-![Compliant Badge](ouia-pagesafe.png)
+![](ouia-pagesafe.png "Page Safe Compliance Badge")
