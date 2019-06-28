@@ -1,0 +1,14 @@
+image: iqe-gitlab-builder
+
+stages:
+  - make
+
+make:
+  stage: make
+  script:
+    - python3 -m virtualenv /tmp/src
+    - source /tmp/src/bin/activate
+    - pip install -U -r requirements.txt
+    - make html
+  tags:
+    - iqe
