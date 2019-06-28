@@ -65,12 +65,18 @@ This part is designed to cover components in use on pages. Components that are `
   * e.g. A page that has a special dropdown could choose to name that dropdown as `CustomDropdown`.
     All instances of this `CustomDropdown` component **MUST** be expected to be able to be controlled
     via the same automation.
-* An id attribute called `data-ouia-component-id`, which is **OPTIONAL** if there will only be
-  one instance of the component on the page at once. Any `id` on the page **MUST** be unique,
-  even if it is used by different component.
+* An id attribute called `data-ouia-component-id`
+  * if there is only one instance of the component on the page at once, it is **OPTIONAL**
+  * if there are multiple instances of a component on the page it **MUST** be used
+  * it **MUST** be unique within the surrounding context of the component
+    (context may be a surrounding component or collection)
   * e.g. A vertical navigation can be expected to only be instantiated once on a page. As such
     it does not need any other identifying factors. Another component type, like a button, would be
     created multiple times on a page and requires some kind of unique identifying id.
+  * e.g. An list of items could have tags associated with them. These could be presented in a
+    tabular format. Whilst the ids of those tags could be identical, they are also contained in rows
+    that make them contextually different. An alternative to this is that the id could be prefixed
+    with the item id that it is related to, to create a compound id.
 * An attribute called `data-ouia-safe`, which is `True` only when the component is in a static state,
   i.e. no animations are occurring. At all other times, this value **MUST** be `False`.
 
@@ -110,6 +116,9 @@ have the following properties:
   **MUST** also be defined with hidden links inside the *Navigation* pane to aid in site map 
   creation.
   * e.g. `<a href="/settings" data-ouia-navigation-name="Settings" hidden="true"/>`
+* If OUIA attributes are not enabled by default there **SHOULD** be an HTML local storage
+  variable `ouia.enabled`, to enable the usage of these attributes. Such action **MAY** incur
+  a page restart.
 
 ##### Example of `OUIA:Page`
 A page describing the edit action of a food item with the id 142526 could have an attribute
@@ -125,7 +134,7 @@ looking like `<body ouia-page-type="food" ouia-page-action="edit" ouia-page-obje
   specific implementation details.
 
 ### Declaration of Conformity
-A project wishing to declare its conformity should use one of the supplied badges, or in the
+A project wishing to declare its conformity **SHOULD** use one of the supplied badges, or in the
 case that the entire spec has been conformed to in its entirety should proudly display the overall
 compliance badge.
 
