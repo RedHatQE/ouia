@@ -1,4 +1,4 @@
-Open UI Automation (OUIA) 1.0
+Open UI Automation (OUIA) 1.0-RC
 ===================================================================
 
 Metadata
