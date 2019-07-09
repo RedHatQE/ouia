@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Open Web UI Design Specification for Enabling Automation (OUIA)
-===================================================================
+===============================================================
 
 Welcome to the OUIA specification. The OUIA was designed to assist the
 various parties involed in web UI construction
