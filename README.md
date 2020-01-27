@@ -133,6 +133,10 @@ looking like `<body ouia-page-type="food" ouia-page-action="edit" ouia-page-obje
 * This should take the form of a Boolean, but the specification does not impose a specific
   implementation.
 
+### Example
+
+An example page that fully complies with the OUIA is presented [here](example.html)
+
 ### Declaration of Conformity
 A project wishing to declare its conformity **SHOULD** use one of the supplied badges, or in the
 case that the entire spec has been conformed to in its entirety should proudly display the overall
