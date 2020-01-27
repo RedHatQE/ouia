@@ -1,5 +1,5 @@
 Open UI Automation (OUIA) 1.0-RC
-===================================================================
+================================
 
 Metadata
 --------
@@ -125,13 +125,13 @@ A page describing the edit action of a food item with the id 142526 could have a
 looking like `<body ouia-page-type="food" ouia-page-action="edit" ouia-page-object-id="142526">`
 
 ### `OUIA:PageSafe`
-* A javascript accessible attribute named `ouia-page-safe` which declares whether the page
-  is safe to access. This should roll up a single value which represents the completion of:
+* An attribute named `ouia-page-safe` which declares whether the page
+  is safe to access. This should represent the state of all `data-ouia-safe` attributes as well as:
   * Page animations
   * XHR requests
   * Any other operations which affect the DOM structure
-* This should take the form of a Boolean, but the specification can and should not make imposed
-  specific implementation details.
+* This should take the form of a Boolean, but the specification does not impose a specific
+  implementation.
 
 ### Declaration of Conformity
 A project wishing to declare its conformity **SHOULD** use one of the supplied badges, or in the
