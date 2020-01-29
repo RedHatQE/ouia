@@ -62,9 +62,12 @@ This part is designed to cover components in use on pages. Components that are `
 
 * A root level HTML element with a `data-ouia-component-type` attribute describing a unique name
   identifying **ALL** HTML components that can be controlled with the same code or interactions.
-  * e.g. A page that has a special dropdown could choose to name that dropdown as `CustomDropdown`.
-    All instances of this `CustomDropdown` component **MUST** be expected to be able to be controlled
-    via the same automation.
+  These identifiers **MAY** and **SHOULD** be namespaced when used within a framework, particularly
+  when the name is generic. The delimiter between namespace and type name should be a single `/`
+  character.
+  * e.g. A page that has a special dropdown could choose to name that dropdown as
+    `FrameworkA/CustomDropdown`. All instances of this `FrameworkA/CustomDropdown` component
+    **MUST** be expected to be able to be controlled via the same automation.
 * An id attribute called `data-ouia-component-id`
   * if there is only one instance of the component on the page at once, it is **OPTIONAL**
   * if there are multiple instances of a component on the page it **MUST** be used
