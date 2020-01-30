@@ -88,20 +88,20 @@ This part is designed to cover page identification. Pages that are `OUIA:Page` c
 have the following properties:
 
 * A `<body>` html tag with the following attributes:
-  * A `ouia-page-type` attribute, which determines the base context of the page.
+  * A `data-ouia-page-type` attribute, which determines the base context of the page.
      * e.g. A page listing some inventory of food items could have `food` as its 
-       `ouia-page-type` attribute.
-  * A `ouia-page-action` attribute, which determines if the page has a controller
+       `data-ouia-page-type` attribute.
+  * A `data-ouia-page-action` attribute, which determines if the page has a controller
      associated with it to perform a specific action. This is **OPTIONAL** if the page does
      not describe a specific action, or is a single action screen displaying information only.
      * e.g. A page providing the edit action of an inventory item could have an `edit` value
-       for the `ouia-page-action` attribute. Whereas a modal about page would not need an 
-       `ouia-page-action` attribute.
+       for the `data-ouia-page-action` attribute. Whereas a modal about page would not need an 
+       `data-ouia-page-action` attribute.
   * A page which dynamically changes action without a page reload **MUST** correctly update the
-    `ouia-page-type` and `ouia-page-action` attributes if the context of the page changes.
-  * An **OPTIONAL** `ouia-page-object-id` attribute, where the page is in the context of a
+    `data-ouia-page-type` and `data-ouia-page-action` attributes if the context of the page changes.
+  * An **OPTIONAL** `data-ouia-page-object-id` attribute, where the page is in the context of a
     specific instance of an object.  E.g. A page describing a food item that is
-    being edited, could have an `ouia-page-object-id` field of 142526.
+    being edited, could have an `data-ouia-page-object-id` field of 142526.
 * Each of the four main content areas present on the page, *Header*, *Main*, *Navigation*, *Footer*,
   **MUST** be embellished with the corresponding data attribute to aid in finding components
   within certain areas.
@@ -128,7 +128,7 @@ A page describing the edit action of a food item with the id 142526 could have a
 looking like `<body ouia-page-type="food" ouia-page-action="edit" ouia-page-object-id="142526">`
 
 ### `OUIA:PageSafe`
-* An attribute named `ouia-page-safe` which declares whether the page
+* An attribute named `data-ouia-page-safe` which declares whether the page
   is safe to access. This should represent the state of all `data-ouia-safe` attributes as well as:
   * Page animations
   * XHR requests
