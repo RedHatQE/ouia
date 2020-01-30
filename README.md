@@ -120,7 +120,7 @@ have the following properties:
   creation.
   * e.g. `<a href="/settings" data-ouia-navigation-name="Settings" hidden="true"/>`
 * If OUIA attributes are not enabled by default there **SHOULD** be an HTML local storage
-  variable `ouia.enabled`, to enable the usage of these attributes. Such action **MAY** incur
+  variable `ouia:enabled`, to enable the usage of these attributes. Such action **MAY** incur
   a page restart.
 
 ##### Example of `OUIA:Page`
