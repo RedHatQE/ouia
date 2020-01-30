@@ -125,7 +125,7 @@ have the following properties:
 
 ##### Example of `OUIA:Page`
 A page describing the edit action of a food item with the id 142526 could have an attribute
-looking like `<body ouia-page-type="food" ouia-page-action="edit" ouia-page-object-id="142526">`
+looking like `<body data-ouia-page-type="food" data-ouia-page-action="edit" data-ouia-page-object-id="142526">`
 
 ### `OUIA:PageSafe`
 * An attribute named `data-ouia-page-safe` which declares whether the page
