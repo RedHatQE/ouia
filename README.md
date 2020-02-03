@@ -66,8 +66,11 @@ This part is designed to cover components in use on pages. Components that are `
   when the name is generic. The delimiter between namespace and type name should be a single `/`
   character.
   * e.g. A page that has a special dropdown could choose to name that dropdown as
-    `FrameworkA/CustomDropdown`. All instances of this `FrameworkA/CustomDropdown` component
+    `CustomDropdown`. All instances of this `CustomDropdown` component
     **MUST** be expected to be able to be controlled via the same automation.
+* A `data-ouia-component-ns` describing the namespace the component belongs to. This is vital to
+  be able to differentiate between the use of multiple frameworks, or custom implementations of
+  components on the same page.
 * An id attribute called `data-ouia-component-id`
   * if there is only one instance of the component on the page at once, it is **OPTIONAL**
   * if there are multiple instances of a component on the page it **MUST** be used
@@ -123,7 +126,7 @@ have the following properties:
   variable `ouia:enabled`, to enable the usage of these attributes. Such action **MAY** incur
   a page restart.
 
-##### Example of `OUIA:Page`
+#### Example of `OUIA:Page`
 A page describing the edit action of a food item with the id 142526 could have an attribute
 looking like `<body data-ouia-page-type="food" data-ouia-page-action="edit" data-ouia-page-object-id="142526">`
 
@@ -136,7 +139,7 @@ looking like `<body data-ouia-page-type="food" data-ouia-page-action="edit" data
 * This should take the form of a Boolean, but the specification does not impose a specific
   implementation.
 
-### Example
+### Example Page
 
 An example page that fully complies with the OUIA is presented [here](example.html)
 
