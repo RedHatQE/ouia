@@ -138,7 +138,7 @@ looking like `<body data-ouia-page-type="food" data-ouia-page-action="edit" data
 
 ### Example
 
-An example page that fully complies with the OUIA is presented [here](example.html)
+An example page that fully complies with the OUIA is presented [here](_static/example.html)
 
 ### Declaration of Conformity
 A project wishing to declare its conformity **SHOULD** use one of the supplied badges, or in the
